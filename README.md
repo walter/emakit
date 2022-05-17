@@ -6,13 +6,15 @@ Right now this is aimed at setting up a productive environment for programming i
 
 ## External Required Software
 
+Obviously emacs. This is aimed at Emacs Plus, but should work with most vanilla emacs variants without much modification. Assumes `~/.emacs.d` directory.
+
 Since it relies on LSP, you'll need to install an lsp server for any languages you want to support. This will be touched on in Install below.
 
 ## Install
 
 * `cd ~/emacs.d/`
 * `git clone git://github.com/walter/emakit.git`
-* add the following to `~/emacs.d/init.el`
+* add the following to `~/emacs.d/init.el` - create the file if it doesn't already exist
 
 <pre>
 <code>
