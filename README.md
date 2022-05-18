@@ -8,7 +8,7 @@ Right now this is aimed at setting up a productive environment for programming i
 
 Obviously emacs. This is aimed at Emacs Plus, but should work with most vanilla emacs variants without much modification. Assumes `~/.emacs.d` directory.
 
-Since it relies on LSP, you'll need to install an lsp server for any languages you want to support. This will be touched on in Install below.
+Since it relies on LSP, you'll need to install an lsp server for any languages you want to support. This will be touched on in Install below. Remember where you installed elixir lsp server for later.
 
 ## Install
 
@@ -26,9 +26,9 @@ Since it relies on LSP, you'll need to install an lsp server for any languages y
 
 ;; set up our various directories to load
 (add-to-list 'load-path kitfiles-dir)
-(require 'init)
+(require 'emakit)
 </code>
 </pre>
 
 
-* restart emacs
+* restart emacs and wait for packages to install...
