@@ -33,6 +33,7 @@
 (require 'yasnippet-config)
 (require 'smartparens-config)
 (require 'which-key-config)
+(require 'load-env-vars-config)
 (require 'exunit-config)
 (require 'elixir-mode-config)
 (require 'lsp-mode-config)
