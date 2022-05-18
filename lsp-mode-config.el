@@ -24,4 +24,7 @@
 ;; or toggle them on or off with , T d
 ; (setq lsp-ui-doc-enable nil)
 
+(with-eval-after-load 'lsp-mode
+  (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
+
 (provide 'lsp-mode-config)
