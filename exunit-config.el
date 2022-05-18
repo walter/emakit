@@ -6,6 +6,7 @@
 ;;
 ;; http://github.com/walter/emakit
 
+; https://github.com/ananthakumaran/exunit.el
 (use-package exunit)
 
 (provide 'exunit-config)
