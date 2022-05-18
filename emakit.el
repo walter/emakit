@@ -26,28 +26,24 @@
 
 ;; Additional packages and configuration
 
-;; needed:
-; lsp-mode-config
-; elixir-mode-config
-
-;;;;; Aquamacs Emacs Starter Kit specific customizations --investigate each of these
-;; (require 'adjust-alchemist) ; move to adjust-elixir, has to be after adjust-shell
-;; (require 'adjust-tabs) ; web-mode specific stuff should be moved to use package web-mode block
-;; (require 'company-mode-backends) ; --keep, but within use_package blocks?
-
 (require 'appearance)
 (require 'adjust-shell)
 (require 'magit-config)
-; (require 'emoji-font-config)
-; (require 'company-config)
+(require 'exunit-config)
+(require 'elixir-mode-config)
+(require 'lsp-mode-config)
+(require 'web-config)
+(require 'company-web-config)
+(require 'emoji-font-config)
+(require 'company-config)
 (require 'which-key-config)
 (require 'whitespace-config)
 (require 'ido-config)
-;; (require 'file-mode-mappings)
+(require 'file-mode-mappings)
 (require 'org-mode-config)
 (require 'useful-functions)
 (require 'mac-os-keyboard-shortcuts)
-
-;;;;; end Aquamacs Emacs Starter Kit specific customizations
+(require 'more-packages)
+(require 'unicode-fonts-config)
 
 (provide 'emakit)
