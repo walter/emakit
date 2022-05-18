@@ -12,8 +12,11 @@ Since it relies on LSP, you'll need to install an lsp server for any languages y
 
 ## Install
 
+* set up your lsp server and note path of parent directory of `language_server.sh`, default is `~/.elixir-ls/release`
 * `cd ~/emacs.d/`
-* `git clone git://github.com/walter/emakit.git`
+* `git clone git://github.com/walter/emakit.git` (or even better clone your fork)
+* if your language server directory setting is different, update in `emakit/lsp-mode-config.el`
+* have a look around the files under `emakit`, here's your chance to personalize things, like your theme in `emakit/appearance.el`
 * add the following to `~/emacs.d/init.el` - create the file if it doesn't already exist
 
 <pre>
