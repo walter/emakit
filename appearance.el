@@ -12,9 +12,15 @@
 ; (scroll-bar-mode -1)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(use-package doom-themes
-  :ensure t
-  :config
-  (load-theme 'doom-city-lights t))
+(setq default-frame-alist
+      '(
+        (background-color . "black")
+        (foreground-color . "green")
+        ))
+
+;; (use-package doom-themes
+;;   :ensure t
+;;   :config
+;;   (load-theme 'doom-city-lights t))
 
 (provide 'appearance)
