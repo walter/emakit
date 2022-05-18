@@ -9,7 +9,7 @@
 (use-package elixir-mode
   :ensure t
   :config
-  (add-hook 'elixir-mode-hook #'smartparens-mode)
+  (add-hook 'elixir-mode-hook 'smartparens-mode)
   (add-hook 'elixir-mode-hook 'exunit-mode))
 
 (provide 'elixir-mode-config)

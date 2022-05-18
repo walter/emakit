@@ -8,4 +8,4 @@
 
 (use-package smartparens)
 
-(provide 'elixir-mode-config)
+(provide 'smartparens-config)

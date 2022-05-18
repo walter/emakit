@@ -9,6 +9,7 @@
 (use-package lsp-mode
   :commands lsp
   :ensure t
+  :diminish lsp-mode
   :hook
   (elixir-mode . lsp)
   :init
@@ -16,11 +17,11 @@
   (setq lsp-keymap-prefix "C-c l")
   )
 
-(use-package lsp-ui :commands lsp-ui-mode)
+(use-package lsp-ui)
 ; (use-package company-lsp :commands company-lsp)
 
 ;; disable pop up docs, you can use the , h h command to show them
 ;; or toggle them on or off with , T d
-(setq lsp-ui-doc-enable nil)
+; (setq lsp-ui-doc-enable nil)
 
 (provide 'lsp-mode-config)
