@@ -9,7 +9,6 @@
 (use-package flx-ido)
 (use-package forge)
 (use-package gh-md)
-(use-package gist)
 (use-package rainbow-delimiters)
 (use-package yaml-mode)
 
