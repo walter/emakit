@@ -24,6 +24,12 @@
 ;; or toggle them on or off with , T d
 ; (setq lsp-ui-doc-enable nil)
 
+;; fix diagnostics getting truncated in sideline
+;; https://elixir-lang.slack.com/archives/C067Y5FN1/p1667322422740149
+;; and https://emacs-lsp.github.io/lsp-mode/tutorials/how-to-turn-off/
+(setq lsp-ui-sideline-show-code-actions t)
+(setq lsp-ui-sideline-show-diagnostics t)
+
 (with-eval-after-load 'lsp-mode
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
 
