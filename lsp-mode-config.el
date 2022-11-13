@@ -30,6 +30,17 @@
 (setq lsp-ui-sideline-show-code-actions t)
 (setq lsp-ui-sideline-show-diagnostics t)
 
+;; lsp-file-watch-ignore-list
+;; thanks aw from https://elixir-lang.slack.com/archives/C067Y5FN1/p1667383339645819
+(dolist (match
+           '("[/\\\\].direnv$"
+             "[/\\\\]node_modules$"
+             "[/\\\\]deps"
+             "[/\\\\]priv"
+             "[/\\\\]build"
+             "[/\\\\]_build"))
+  (add-to-list 'lsp-file-watch-ignored match))
+
 (with-eval-after-load 'lsp-mode
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
 
