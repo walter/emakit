@@ -8,4 +8,12 @@
 
 (use-package flycheck)
 
+;; make sure you have credo installed and then uncomment flycheck-credo-setup
+;; (use-package flycheck-credo)
+
+;; (eval-after-load 'flycheck
+;;   '(flycheck-credo-setup))
+
+;; (add-hook 'elixir-mode-hook 'flycheck-mode)
+
 (provide 'flycheck-config)
