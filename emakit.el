@@ -2,7 +2,7 @@
 ;;
 ;; Trigger loading of emakit configuration and package loading
 ;;
-;; Walter McGinnis, 2022-05-18
+;; Walter McGinnis, 2023-06-19
 ;;
 ;; http://github.com/walter/emakit
 
@@ -17,37 +17,42 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-;; use-package to simplify the config file
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
 (require 'use-package)
 (setq use-package-always-ensure 't)
+
+;; we depend on treesit-auto to load grammers on first use of a mode
+;; https://github.com/renzmann/treesit-auto
+;;   (setq treesit-auto-install 't)
+(use-package treesit-auto
+  :demand t
+  :config
+  (setq treesit-auto-install 'prompt)
+  (global-treesit-auto-mode))
 
 ;; Additional packages and configuration
 
 (require 'appearance)
 (require 'adjust-shell)
 (require 'magit-config)
-(require 'flycheck-config)
 (require 'yasnippet-config)
 (require 'smartparens-config)
 (require 'which-key-config)
 (require 'load-env-vars-config)
 (require 'exunit-config)
-(require 'elixir-mode-config)
-(require 'lsp-mode-config)
-(require 'web-config)
-(require 'company-web-config)
-(require 'emoji-font-config)
-(require 'company-config)
+(require 'elixir-ts-mode-config)
+(require 'lsp-config)
+(require 'flycheck-config)
+(require 'mix-config)
+(require 'inf-elixir-config)
+;; (require 'web-config)
+;; (require 'company-config)
 (require 'whitespace-config)
 (require 'ido-config)
-(require 'file-mode-mappings)
+;; (require 'file-mode-mappings)
 (require 'org-mode-config)
 (require 'useful-functions)
 (require 'mac-os-keyboard-shortcuts)
 (require 'more-packages)
-(require 'unicode-fonts-config)
+;; (require 'polymode-config)
 
 (provide 'emakit)

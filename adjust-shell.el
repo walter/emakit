@@ -18,6 +18,7 @@
 ;; (setenv "SHELL" "/usr/local/bin/zsh")
 (setenv "SHELL" "/opt/homebrew/bin/zsh")
 
+;; if using emacs-plus, may not be necessary
 (use-package exec-path-from-shell
   :if (memq window-system '(mac ns))
   :init
