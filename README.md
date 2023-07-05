@@ -30,7 +30,7 @@ We also take advantage of [treesit-auto](https://github.com/renzmann/treesit-aut
 * set up your lsp server and note path of parent directory of `language_server.sh`, default is `~/.elixir-ls/release`
 * `cd ~/emacs.d/`
 * `git clone git://github.com/walter/emakit.git` (or even better clone your fork)
-* if your language server directory setting is different, update in `emakit/lsp-mode-config.el`
+* if your language server directory setting is different, update in `emakit/lsp-config.el`
 * have a look around the files under `emakit`, here's your chance to personalize things, like your theme in `emakit/appearance.el`
 * add the following to `~/emacs.d/init.el` - create the file if it doesn't already exist
 
