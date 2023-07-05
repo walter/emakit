@@ -11,14 +11,18 @@
   :ensure t
   :diminish lsp-mode
   :hook
-  (elixir-mode . lsp)
+  (elixir-ts-mode . lsp)
+  :hook
+  (heex-ts-mode . lsp)
   :init
   (add-to-list 'exec-path "~/.elixir-ls/release")
-  (setq lsp-keymap-prefix "C-c l")
+  (setq lsp-keymap-prefix "C-, l")
+  :custom
+  (lsp-diagnostics-flycheck-default-level 'warning)
+  (lsp-diagnostics-provider :flycheck)
   )
 
 (use-package lsp-ui)
-; (use-package company-lsp :commands company-lsp)
 
 ;; disable pop up docs, you can use the , h h command to show them
 ;; or toggle them on or off with , T d
@@ -33,15 +37,24 @@
 ;; lsp-file-watch-ignore-list
 ;; thanks aw from https://elixir-lang.slack.com/archives/C067Y5FN1/p1667383339645819
 (dolist (match
-           '("[/\\\\].direnv$"
-             "[/\\\\]node_modules$"
-             "[/\\\\]deps"
-             "[/\\\\]priv"
-             "[/\\\\]build"
-             "[/\\\\]_build"))
+         '("[/\\\\].direnv$"
+           "[/\\\\]node_modules$"
+           "[/\\\\]deps"
+           "[/\\\\]priv"
+           "[/\\\\]build"
+           "[/\\\\]_build"))
   (add-to-list 'lsp-file-watch-ignored match))
 
 (with-eval-after-load 'lsp-mode
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
 
-(provide 'lsp-mode-config)
+;; https://github.com/emacs-lsp/lsp-treemacs
+(use-package lsp-treemacs)
+
+(lsp-treemacs-sync-mode 1)
+
+;; lsp-credo requires lsp-mode 20230628.1609 or later
+;; https://github.com/elixir-tools/credo-language-server
+(custom-set-variables '(lsp-credo-version "0.1.3"))
+
+(provide 'lsp-config)

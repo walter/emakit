@@ -2,7 +2,7 @@
 ;;
 ;; load package, configure, global hook, etc.
 ;;
-;; Walter McGinnis, 2022-05-18
+;; Walter McGinnis, 2023-06-19
 ;;
 ;; http://github.com/walter/emakit
 
@@ -10,8 +10,6 @@
 (use-package company
   :ensure t
   :config
-  (global-company-mode)
-  (add-to-list 'company-backends 'company-emoji)
-  (add-to-list 'company-backends 'company-web-html))
+  (global-company-mode))
 
 (provide 'company-config)

@@ -6,9 +6,24 @@ Right now this is aimed at setting up a productive environment for programming i
 
 ## External Required Software
 
-Obviously emacs. This is aimed at Emacs Plus, but should work with most vanilla emacs variants without much modification. Assumes `~/.emacs.d` directory.
+Obviously emacs (at least 29.1 for tree-sitter support). This is aimed at Emacs Plus, but should work with most vanilla emacs variants without much modification. Assumes `~/.emacs.d` directory.
 
-Since it relies on LSP, you'll need to install an lsp server for any languages you want to support. This will be touched on in Install below. Remember where you installed elixir lsp server for later.
+Since it relies on LSP, you'll need to install an lsp server for any languages you want to support. This will be touched on in Install below. Remember where you installed elixir lsp server for later. Later emacs will also be installing the `credo-language-server` binary.
+
+You'll also need to install tree-sitter and make sure your emacs is able to use it (e.g. [steps here](https://github.com/wkirschbaum/elixir-ts-mode#installing-emacs-29-on-mac-os-or-linux-via-homebrew)).
+
+We also take advantage of [treesit-auto](https://github.com/renzmann/treesit-auto) for installation of tree-sitter versions of major mode grammers. E.g. the first time you open an JavaScript file, if the grammer hasn't beem downloaded and enabled previously, it will be.
+
+## Included Elixir support
+
+* [elixir-ts-mode](https://github.com/wkirschbaum/elixir-ts-mode)
+* [heex-ts-mode](https://github.com/wkirschbaum/heex-ts-mode)
+* [mix minor mode](https://github.com/ayrat555/mix.el)
+* [inf-elixir](https://github.com/J3RN/inf-elixir)
+* [exunit](https://github.com/ananthakumaran/exunit.el)
+* [credo-ls via lsp-mode](https://github.com/elixir-tools/credo-language-server#editor-support)
+* [lsp-treemacs](https://github.com/emacs-lsp/lsp-treemacs)
+* [yasnippet-snippets](https://github.com/AndreaCrotti/yasnippet-snippets)
 
 ## Install
 
@@ -35,3 +50,5 @@ Since it relies on LSP, you'll need to install an lsp server for any languages y
 
 
 * restart emacs and wait for packages to install...
+
+* after packages have been install, run `M-x lsp-install-server credo-language-server`
