@@ -6,7 +6,7 @@ Right now this is aimed at setting up a productive environment for programming i
 
 ## External Required Software
 
-Obviously emacs (at least 29.1 for tree-sitter support). This is aimed at Emacs Plus, but should work with most vanilla emacs variants without much modification. Assumes `~/.emacs.d` directory.
+Obviously emacs (at least 29.1, actually `~29.0.91`, for tree-sitter support). This is aimed at Emacs Plus, but should work with most vanilla emacs variants without much modification. Assumes `~/.emacs.d` directory.
 
 Since it relies on LSP, you'll need to install an lsp server for any languages you want to support. This will be touched on in Install below. Remember where you installed elixir lsp server for later. Later emacs will also be installing the `credo-language-server` binary.
 
