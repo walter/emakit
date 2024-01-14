@@ -6,8 +6,8 @@
 ;;
 ;; http://github.com/walter/emakit
 
-;; based on collaboration between https://github.com/axelson
-;; and Johnny5 in slack: https://elixir-lang.slack.com/archives/C067Y5FN1/p1704933246933849
+;; based on collaboration between [@axelson](https://github.com/axelson)
+;; and Johnny5 (aka [@djgoku](https://github.com/djgoku)in slack: https://elixir-lang.slack.com/archives/C067Y5FN1/p1704933246933849
 ;; final version from https://elixir-lang.slack.com/archives/C067Y5FN1/p1704941330184569
 (defun elixir-get-module-name ()
   "Get the elixir module name"
