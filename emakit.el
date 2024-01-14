@@ -51,6 +51,7 @@
 (require 'file-mode-mappings)
 (require 'org-mode-config)
 (require 'useful-functions)
+(require 'elixir-useful-functions)
 (require 'mac-os-keyboard-shortcuts)
 (require 'more-packages)
 ;; (require 'polymode-config)
