@@ -26,7 +26,7 @@
 
 ;; disable pop up docs, you can use the , h h command to show them
 ;; or toggle them on or off with , T d
-; (setq lsp-ui-doc-enable nil)
+;; (setq lsp-ui-doc-enable nil)
 
 ;; fix diagnostics getting truncated in sideline
 ;; https://elixir-lang.slack.com/archives/C067Y5FN1/p1667322422740149
@@ -55,6 +55,6 @@
 
 ;; lsp-credo requires lsp-mode 20230628.1609 or later
 ;; https://github.com/elixir-tools/credo-language-server
-(custom-set-variables '(lsp-credo-version "0.1.3"))
+(custom-set-variables '(lsp-credo-version "0.3.0"))
 
 (provide 'lsp-config)
