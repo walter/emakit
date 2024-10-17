@@ -50,6 +50,7 @@
 (require 'ido-config)
 (require 'file-mode-mappings)
 (require 'org-mode-config)
+(require 'presentation-config)
 (require 'useful-functions)
 (require 'elixir-useful-functions)
 (require 'mac-os-keyboard-shortcuts)
