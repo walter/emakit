@@ -1,5 +1,7 @@
 # emakit - emacs editor configuration kit
 
+_NOTE: there is a more up-to-date and experimental branch that uses [expert](https://expert-lsp.org) for lsp and emacs 30.1 at [emacs-30](https://github.com/walter/emakit/tree/emacs-30). It's experimental because `expert` is still prerelease._
+
 Supercedes [Aquamacs Emacs Starter Kit](https://github.com/walter/aquamacs-emacs-starter-kit) as I have now moved to [Emacs Plus](https://github.com/d12frosted/homebrew-emacs-plus).
 
 Right now this is aimed at setting up a productive environment for programming in  [Elixir](https://elixir-lang.org) via [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) use, but other language support is easily added.
