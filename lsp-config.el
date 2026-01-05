@@ -10,6 +10,8 @@
   :commands lsp
   :ensure t
   :diminish lsp-mode
+  :config
+  (setq lsp-modeline-code-actions-segments '(count icon name))
   :hook
   (elixir-ts-mode . lsp)
   :hook
@@ -21,6 +23,8 @@
   (lsp-diagnostics-flycheck-default-level 'warning)
   (lsp-diagnostics-provider :flycheck)
   )
+
+(setq-default lsp-format-buffer-on-save t)
 
 (use-package lsp-ui)
 
@@ -38,6 +42,7 @@
 ;; thanks aw from https://elixir-lang.slack.com/archives/C067Y5FN1/p1667383339645819
 (dolist (match
          '("[/\\\\].direnv$"
+           "[/\\\\]mise.toml$"
            "[/\\\\]node_modules$"
            "[/\\\\]deps"
            "[/\\\\]priv"
@@ -49,12 +54,9 @@
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
 
 ;; https://github.com/emacs-lsp/lsp-treemacs
+;; maybe remove if redundent with expert or elixir-ts-mode
 (use-package lsp-treemacs)
 
 (lsp-treemacs-sync-mode 1)
-
-;; lsp-credo requires lsp-mode 20230628.1609 or later
-;; https://github.com/elixir-tools/credo-language-server
-(custom-set-variables '(lsp-credo-version "0.3.0"))
 
 (provide 'lsp-config)

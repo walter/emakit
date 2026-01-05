@@ -8,10 +8,12 @@
 
 (require 'treesit)
 
-(add-to-list 'major-mode-remap-alist '(elixir-mode . elixir-ts-mode))
-
+;; assumes expert command (elixir lsp) is within path
 (use-package elixir-ts-mode
   :ensure t
+  :mode (("\\.ex\\'" . elixir-ts-mode)
+         ("\\.exs\\'" . elixir-ts-mode)
+         ("\\mix.lock\\'" . elixir-ts-mode))
   :hook
   (
    (elixir-ts-mode . flycheck-mode)
@@ -19,8 +21,9 @@
    (elixir-ts-mode . mix-minor-mode)
    (elixir-ts-mode . exunit-mode)
    )
-  :config (add-hook 'elixir-ts-mode-hook (lambda ()
-                                           (add-hook 'before-save-hook 'lsp-format-buffer))))
+  :custom
+  (lsp-elixir-server-command '("expert" "--stdio"))
+  )
 
 
 (provide 'elixir-ts-mode-config)

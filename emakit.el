@@ -55,6 +55,5 @@
 (require 'elixir-useful-functions)
 (require 'mac-os-keyboard-shortcuts)
 (require 'more-packages)
-;; (require 'polymode-config)
 
 (provide 'emakit)
